@@ -17,9 +17,9 @@ info to be displayed, including one or more of
     * Potentially also some creative "timeline" display against it, showing team states and their duration.
 
 
-![Player List UI 1 - "Highlighted Subsets"](./img/player-list-ui-01.png 'Fig. 1: Player List UI 1 - "Highlighted Subsets"')
+![Player List UI 1 - "Highlighted Subsets"](./img/player-list-ui-01.png 'Fig. 1: Player List UI 1 - "Highlighted Subsets"'){ width: "50%" }
 
-![League Team Roster UI 1 - "Matchup"](./img/league-team-roster-ui-01.png 'Fig. 2: League Team Roster UI 1 - "Matchup"')
+![League Team Roster UI 1 - "Matchup"](./img/league-team-roster-ui-01.png 'Fig. 2: League Team Roster UI 1 - "Matchup"') { width: "50%" }
 
 
 ### Trade Tools
