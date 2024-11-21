@@ -1,0 +1,30 @@
+ ## UIs
+ ### Player
+ We want to have a page that conveys a lot of information about a player at one
+ time, including
+ 
+* how that player's projections have been trending over the last week
+* their performance history
+    * raw performance metrics
+    * fantasy points, using league settings
+* context for past performances - Look into timeline UIs  
+    * their injuries (obviously)
+    * teammates' injuries
+    * team roster changes
+    * strength of matchups
+* performance projections
+    * stats projections
+    * ScoringConfig (stats projections) -> fantasy projections
+* context for future
+    * returning teammates
+    * strength of matchups
+
+### NFL Teams
+* fantasy points and stats allowed - to position - drill down into wide receiver types
+* fantasy points and stats allowed - to play type - short/long pass, qb rush
+* fantasy points and stats allowed - to (passing, rushing, receiving)
+* defensive roster changes
+
+### League Teams
+* Comparison of current players' past performance
+* Comparison of current players' projected performance
