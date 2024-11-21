@@ -7,6 +7,18 @@ These sites will often have many tools.  Below I'm just listing the ones that we
 * Enables you to rank teams by starting roster and full roster
 * The team comparison that looks like "fantasy-pros-waiver-wire view" is useful.  I think fantasy pros might also have this.
 
-## fantasyfootballranker.com
+# fantasyfootballranker.com
 * `Money talk` - My team rank: 8th
 * Just ranks teams with a dynasty and redraft measure.
+* Also not a fan of the colors/overall look and feel of the UI.  
+
+# cheatsheetking.com
+* Very unclear how to use, and it's broken in several ways.
+* `Add` button is presumably supposed to enable one to type in a player and add it to their sheet.  The search does not return all players which match the query.  (e.g. (resultSet "James") does not include James Cook).
+* From what I can tell, a cheatsheet is a ranking of players?  It does not give you a very efficient way of sorting or moving them.  Limited to Drag and Drop.  You can ctrl+click multiple players within a position category, but your selections are lost when you change to another position. 
+
+# Fantasylife.com
+* offers a fuckton of tools behind a paywall
+
+# Footballguys.com
+* Offers 5-10 different stat projects + draftkings and fanduel projections

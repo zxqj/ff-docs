@@ -4,7 +4,7 @@ This is where I dump ideas, so there may be some redundancies.
 
 ### *Mid-Season Draft Tool*
 
-* "all-players-ranked roster-highlighted UI" but modified so that each row allows some extra
+* The Player List UI 1 (Fig. 1), but modified so that each row allows some extra
 info to be displayed, including one or more of
     * some summary representation of several player ranking measures
     * a small message or number conveying extremely salient contextual information (injured: projected return date, teammate projected return date)
@@ -17,10 +17,15 @@ info to be displayed, including one or more of
     * Potentially also some creative "timeline" display against it, showing team states and their duration.
 
 
+![Player List UI 1 - "Highlighted Subsets"](./img/player-list-ui-01.png 'Fig. 1: Player List UI 1 - "Highlighted Subsets"')
+
+![League Team Roster UI 1 - "Matchup"](./img/league-team-roster-ui-01.png 'Fig. 2: League Team Roster UI 1 - "Matchup"')
+
+
 ### Trade Tools
 
 #### *Trade Manual Analysis*
-Could be integrated into League Team - Matchup UI.  We want to show comparison of two values: $m(t_0)$ and $m(t_1)$, where $m$ is the currently-selected measure, $t_0$ and $t_1$ are user's team before and after the trade, respectively.
+Could be integrated into previously-mentioned roster UI styled after the typical "Matchup" UIs (Fig. 2).  We want to show comparison of two values: $m(t_0)$ and $m(t_1)$, where $m$ is the currently-selected measure, $t_0$ and $t_1$ are user's team before and after the trade, respectively.
 
 #### *Trade Finder*
 
@@ -89,6 +94,6 @@ This would be a *great* way to draw people to site.  Go through past trades and 
             are *a lot* more opinions available than with stats projections
             * next week/ROS
     * UIs
-        * "all-players-ranked roster-highlighted UI"
-        * "Matchup" UI with players' values next to them, and totals at op
+        * PlayerListUI1 (Fig 1.)
+        * "Matchup"-style UI (Fig 2.) with players' values next to them, and totals at op
             * some sort of summary comparison
