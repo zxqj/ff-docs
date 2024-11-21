@@ -1,5 +1,4 @@
- ## UIs
- ### Player
+ ## Player
  We want to have a page that conveys a lot of information about a player at one
  time, including
  
@@ -19,12 +18,37 @@
     * returning teammates
     * strength of matchups
 
-### NFL Teams
+## NFL Teams
 * fantasy points and stats allowed - to position - drill down into wide receiver types
 * fantasy points and stats allowed - to play type - short/long pass, qb rush
 * fantasy points and stats allowed - to (passing, rushing, receiving)
 * defensive roster changes
 
-### League Teams
-* Comparison of current players' past performance
-* Comparison of current players' projected performance
+## League Teams
+* 2-Team Comparison of current players' past performance
+* 2-Team Comparison of current players' projected performance
+* Able to change ranking measure for each of listed UIs
+    * ranking measures
+        * (past/projected performance) by (points/stats)
+        * projected performance add'l inputs
+            * can use raw-rankings projections for standard-scoring (PPR/HALF/STD), as there 
+            are *a lot* more opinions available than with stats projections
+            * next week/ROS
+    * UIs
+        * "all-players-ranked roster-highlighted UI"
+        * "Matchup" UI with players' values next to them, and totals at op
+            * some sort of summary comparison
+
+## Use-Case Driven UIs
+Under "player" above, was somewhat driven by wanting a draft UI, so there may be some overlap
+
+### Mid-Season Draft Tool
+
+
+### Trade tool
+Could be integrated into League Team - Matchup UI.  We want to compare selected measure over 
+whole team with each set of players.
+
+**Finder**
+
+**Retrospective**
