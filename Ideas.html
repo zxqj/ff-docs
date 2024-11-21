@@ -1,0 +1,174 @@
+<p>This is where I dump ideas, so there may be some redundancies.</p>
+<h2 id="use-case-driven-uis">Use-Case Driven UIs</h2>
+<h3 id="mid-season-draft-tool"><em>Mid-Season Draft Tool</em></h3>
+<ul>
+<li>“all-players-ranked roster-highlighted UI” but modified so that each
+row allows some extra info to be displayed, including one or more of
+<ul>
+<li>some summary representation of several player ranking measures</li>
+<li>a small message or number conveying extremely salient contextual
+information (injured: projected return date, teammate projected return
+date)</li>
+<li>would-be-if-drafted team measures, or</li>
+<li>the difference between <span
+class="math inline"><em>m</em>(<em>T</em>)</span> and <span
+class="math inline"><em>m</em>(<em>T</em> − {<em>p</em>})</span> (where
+<span class="math inline"><em>T</em></span> is user’s team and <span
+class="math inline"><em>p</em></span> is the player) for
+currently-selected measure <span class="math inline"><em>m</em></span>,
+or</li>
+<li>a summary representation of the above-defined difference for
+multiple measures.</li>
+</ul></li>
+<li>Clicking on a player will display a pop-up with details
+<ul>
+<li>performance stats for season games to date</li>
+<li>additional contextual fields in each row of game data - roster,
+quarterback, target share</li>
+<li>Potentially also some creative “timeline” display against it,
+showing team states and their duration.</li>
+</ul></li>
+</ul>
+<h3 id="trade-tools">Trade Tools</h3>
+<h4 id="trade-manual-analysis"><em>Trade Manual Analysis</em></h4>
+<p>Could be integrated into League Team - Matchup UI. We want to show
+comparison of two values: <span
+class="math inline"><em>m</em>(<em>t</em><sub>0</sub>)</span> and <span
+class="math inline"><em>m</em>(<em>t</em><sub>1</sub>)</span>, where
+<span class="math inline"><em>m</em></span> is the currently-selected
+measure, <span class="math inline"><em>t</em><sub>0</sub></span> and
+<span class="math inline"><em>t</em><sub>1</sub></span> are user’s team
+before and after the trade, respectively.</p>
+<h4 id="trade-finder"><em>Trade Finder</em></h4>
+<p>Search league for trade that would optimize some user-specified
+objective function <span
+class="math inline"><em>f</em>(<em>X</em>)</span> and satisfy a set of
+user-specified constraints <span
+class="math inline"><em>g</em><sub>1</sub>(<em>X</em>) &lt; <em>c</em><sub>1</sub>, ..., <em>g</em><sub><em>n</em></sub>(<em>X</em>) &lt; <em>c</em><sub><em>n</em></sub></span>,
+<span class="math inline"><em>X</em> ∈ <em>D</em></span>. We could
+define the feasible set <span class="math inline"><em>D</em></span> in
+multiple ways, but for the moment let <span
+class="math inline"><em>X</em></span> be some matrix representation of
+both teams’ before and after states. (Obviously, the UI will enable the
+user to specify these in a more intuitive way. No mathematical
+optimization experience required.) For example</p>
+<ul>
+<li><p>“mutually advantageous”</p>
+<ul>
+<li>objective function: <span
+class="math inline"><em>f</em>(<em>X</em>) = <em>g</em><em>a</em><em>i</em><em>n</em>(<em>t</em><sub><em>u</em><em>s</em><em>e</em><em>r</em></sub>,</span><code>trade</code><span
+class="math inline">)</span></li>
+<li>constraints: <span
+class="math inline"><em>g</em><em>a</em><em>i</em><em>n</em>(<em>t</em><sub><em>o</em><em>p</em><em>p</em><em>o</em><em>n</em><em>e</em><em>n</em><em>t</em></sub>,</span><code>trade</code><span
+class="math inline">) &gt; 0</span>,</li>
+<li>where <span
+class="math inline"><em>g</em><em>a</em><em>i</em><em>n</em>(<em>t</em>,</span><code>trade</code><span
+class="math inline">)</span> is how many more fantasy points team <span
+class="math inline"><em>t</em></span> is projected to score,
+rest-of-season, after making <code>trade</code>. (where we consider
+<code>trade</code> to be a function over the collection of sets of
+players, <span
+class="math inline"><em>g</em><em>a</em><em>i</em><em>n</em>(<em>t</em>, <em>f</em>) = <em>p</em>(<em>f</em>(<em>t</em>)) − <em>p</em>(<em>t</em>)</span>
+where <span class="math inline"><em>f</em></span> is the trade and <span
+class="math inline"><em>p</em></span> is projected rest-of-season
+fantasy points.)</li>
+<li>i.e. maximize our benefit whilst still being beneficial to the other
+team.</li>
+</ul></li>
+<li><p>“maximizing difference between apparent and actual opponent-team
+gain”</p>
+<ul>
+<li>e.g.
+<ul>
+<li>apparent: free rankings provided online that don’t take into account
+league settings</li>
+<li>actual: projected points using league settings</li>
+<li>this wouldn’t be a great thing to optimize, but would be interesting
+to see. A better set up would be “maximize actual user-team gain while
+keeping apparent opponent-team gain over a minimum threshold”</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>We’ll have to show the above defined optimization problem can be
+solved, or approximated to some degree of tolerance, reasonably
+efficiently. On second thought, it might be best to think of the
+criteria/constraints ourselves and give the user a set of pre-defined
+options. Or just present the trades we find using our hard-coded
+optimization problems to the user. I do think an easy-to-understand
+(potentially simplified) explanation of what was optimized would be very
+beneficial.</p>
+<h4 id="trade-retrospective"><em>Trade Retrospective</em></h4>
+<p>This would be a <em>great</em> way to draw people to site. Go through
+past trades and enable evaluation of their fairness/quality based on</p>
+<ul>
+<li>information available at the time</li>
+<li>how they actually affected teams afterwards</li>
+</ul>
+<h2 id="general-entity-representation-uis">General Entity-Representation
+UIs</h2>
+<h3 id="player">Player</h3>
+<p>We want to have a page that conveys a lot of information about a
+player at one time, including</p>
+<ul>
+<li>how that player’s projections have been trending over the last
+week</li>
+<li>their performance history
+<ul>
+<li>raw performance metrics</li>
+<li>fantasy points, using league settings</li>
+</ul></li>
+<li>context for past performances - Look into timeline UIs
+<ul>
+<li>their injuries (obviously)</li>
+<li>teammates’ injuries</li>
+<li>team roster changes</li>
+<li>strength of matchups</li>
+</ul></li>
+<li>performance projections
+<ul>
+<li>stats projections</li>
+<li>ScoringConfig (stats projections) -&gt; fantasy projections</li>
+</ul></li>
+<li>context for future
+<ul>
+<li>returning teammates</li>
+<li>strength of matchups</li>
+</ul></li>
+</ul>
+<h3 id="nfl-teams">NFL Teams</h3>
+<ul>
+<li>fantasy points and stats allowed - to position - drill down into
+wide receiver types</li>
+<li>fantasy points and stats allowed - to play type - short/long pass,
+qb rush</li>
+<li>fantasy points and stats allowed - to (passing, rushing,
+receiving)</li>
+<li>defensive roster changes</li>
+</ul>
+<h3 id="league-teams">League Teams</h3>
+<ul>
+<li>2-Team Comparison of current players’ past performance</li>
+<li>2-Team Comparison of current players’ projected performance</li>
+<li>Able to change ranking measure for each of listed UIs
+<ul>
+<li>ranking measures
+<ul>
+<li>(past/projected performance) by (points/stats)</li>
+<li>projected performance add’l inputs
+<ul>
+<li>can use raw-rankings projections for standard-scoring
+(PPR/HALF/STD), as there are <em>a lot</em> more opinions available than
+with stats projections</li>
+<li>next week/ROS</li>
+</ul></li>
+</ul></li>
+<li>UIs
+<ul>
+<li>“all-players-ranked roster-highlighted UI”</li>
+<li>“Matchup” UI with players’ values next to them, and totals at op
+<ul>
+<li>some sort of summary comparison</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
