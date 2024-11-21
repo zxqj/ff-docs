@@ -50,5 +50,16 @@ Could be integrated into League Team - Matchup UI.  We want to compare selected 
 whole team with each set of players.
 
 **Finder**
+Search league for trade that would optimize some user-specified objective function $f(X)$ and satisfy a set of user-specified constraints $g_1(X), ..., g_n(X) >= 0$.  We could define the feasible set in multiple ways, but for the moment let $X$ be some numeric matrix representation of both teams' before and after states.  (Obviously, the UI will enable the user to specify these in a more intuitive way.  No mathematical optimization experience required.)  For example
+* "equally mutually advantageous"
+    * $f(X) = trade_gain(team_1) + trade_gain(team_2)$
+    * $g_1(x) = |trade_gain(team_1) - trade_gain(team_2)| < c$, 
+    * where $trade_gain(t) = projected_ros_fantasy_points(t_{after_trade}) - projected_ros_fantasy_points(t_{prior_trade})$
+
+We'll have to show the above defined optimization problem can be solved or approximated to some degree of tolerance reasonably efficiently.  On second thought, it might be best to think of the criteria/constraints ourselves and give the user a set of
+pre-defined options.  Or just present the trades we find using our hard-coded optimization problems to the user.  I do think an easy-to-understand (potentially simplified) explanation of what was optimized would be very beneficial.
+    
+    projected-fpoints-ROS(team 1 after trade) - projected-points-ROS(team 1 after trade)
+
 
 **Retrospective**
