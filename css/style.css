@@ -1,0 +1,25 @@
+img {
+    padding: 20px auto;
+    width: 75%;
+    max-width: 700px;
+    margin: auto;
+    display: block;
+}
+body {
+    font-family: "Cascadia";
+}
+figcaption {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+img + img {
+    width: 50%;
+    max-width: 400px;
+}
+
+@font-face {
+    font-family: "Cascadia"
+    src:
+        url("fonts/CaskaydiaCoveNerdFont-Regular.ttf");
+}

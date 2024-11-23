@@ -29,20 +29,12 @@ quarterback, target share</li>
 showing team states and their duration.</li>
 </ul></li>
 </ul>
-<figure>
-<img src="./img/player-list-ui-01.png"
-title="Fig. 1: Player List UI 1 - &quot;Highlighted Subsets&quot;"
-alt="Player List UI 1 - “Highlighted Subsets”" />
-<figcaption aria-hidden="true">Player List UI 1 - “Highlighted
-Subsets”</figcaption>
-</figure>
-<figure>
-<img src="./img/league-team-roster-ui-01.png"
-title="Fig. 2: League Team Roster UI 1 - &quot;Matchup&quot;"
-alt="League Team Roster UI 1 - “Matchup”" />
-<figcaption aria-hidden="true">League Team Roster UI 1 -
-“Matchup”</figcaption>
-</figure>
+<p>![Player List UI 1 - “Highlighted
+Subsets”](./img/player-list-ui-01.png ‘Fig. 1: Player List UI 1 -
+“Highlighted Subsets”’ width=“50%”)</p>
+<p>![League Team Roster UI 1 -
+“Matchup”](./img/league-team-roster-ui-01.png ‘Fig. 2: League Team
+Roster UI 1 - “Matchup”’ width=“%50%”)</p>
 <h3 id="trade-tools">Trade Tools</h3>
 <h4 id="trade-manual-analysis"><em>Trade Manual Analysis</em></h4>
 <p>Could be integrated into previously-mentioned roster UI styled after

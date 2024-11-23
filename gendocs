@@ -1,0 +1,4 @@
+#! /bin/bash
+pandoc Ideas.md -o out/Ideas.pdf 
+pandoc Ideas.md -o out/Ideas.html --css=./css/style.css --self-contained
+pandoc Ideas.md -o out/Ideas.ipynb

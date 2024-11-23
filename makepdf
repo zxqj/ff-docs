@@ -1,4 +1,0 @@
-#! /bin/bash
-pandoc Ideas.md -o Ideas.pdf
-pandoc Ideas.md -o Ideas.html
-xdg-open Ideas.pdf >/dev/null 2>&1&
