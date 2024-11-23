@@ -1,7 +1,0 @@
-#! /bin/bash
-#pandoc Ideas.md -o out/frommd/Ideas.pdf 
-#pandoc Ideas.md -o out/frommd/Ideas.html --css=./css/style.css --self-contained
-
-pandoc Ideas.ipynb -o out/fromnb/Ideas.pdf 
-pandoc Ideas.ipynb -o out/fromnb/Ideas.md
-pandoc Ideas.ipynb -o out/fromnb/Ideas.html --css=./css/style.css --self-contained

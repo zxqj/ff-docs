@@ -1,0 +1,7 @@
+css:
+  - ./resources/css/style.css
+embed-resources: true
+number-sections: true
+standalone: true
+resource-path:
+  - ${.}
