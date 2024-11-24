@@ -1,0 +1,17 @@
+# Sleeper
+
+Sleeper has a public API, which apparently has changed quite a bit over the past few years.  It requires no authentication and is all HTTP GET requests and JSON responses.  I will document some of it here as I write code against it/find functions that are useful.  It is pretty well documented, but there are some notable absences.  Several people have written API wrappers around it; I'm doubting those would save very much time.
+
+But the frontend uses some additional APIs they have which are not public. 
+## Public API
+
+*Base URL* - `https://api.sleeper.app/<version=v1>/`
+
+### Users
+1. Get User Leagues `/user/<user_id>/leagues/<sport=nfl>/<season=2017,2017,...>`
+2. Get League `/league/<league_id>`
+3. Get League Rosters `/league/<league_id>/rosters`
+### Avatars
+### Leagues
+### Drats
+### Players
