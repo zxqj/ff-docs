@@ -1,9 +1,5 @@
 #! /bin/bash
 
-if [ ! "$(which tmux)" ]; then
-    echo "tmux required.  Install tmux"
-fi
-
 if docker ps -aq -f name=jupyter-wiki | grep -P '[a-f0-9]{12}'
 then
     xdg-open http://localhost:8888
@@ -23,12 +19,19 @@ fi
 if tmux list-sessions -F '#{session_name}' | grep -q wiki
 then
     echo "tmux session still running. Stopping container and killing session"
-    docker stop wiki
+    docker stop jupyter-wiki
     tmux kill-session -t wiki
 fi
 
 tmux new-session -d -s wiki
 tmux rename-window -t 0 server-log
-tmux send-keys -t 'server-log' 'docker run --detach --rm -p 8888:8888 -v .:/home/jovyan/work --name jupyter-wiki quay.io/jupyter/base-notebook:2024-11-19 cd work/docs && jupyter lab --ServerApp.token="" && sleep 2s && xdg-open http://localhost:8888 && docker attach jupyter-wiki' C-m
+tmux send-keys -t 'server-log' './scripts/runcontainer.sh' \
+    C-m 'sleep 2' \
+    C-m 'xdg-open http://localhost:8080 >/dev/null 2>&1&' \
+    C-m 'docker attach jupyter-wiki' \
+    C-m
 
 echo "Server running at localhost:8888"
+echo "View server output with tmux"
+echo ""
+echo -e "\ttmux attach -t wiki"
