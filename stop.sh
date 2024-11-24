@@ -1,4 +1,4 @@
 #! /bin/bash
 
 docker stop jupyter-wiki
-docker kill-session -t wiki
+tmux kill-session -t wiki
