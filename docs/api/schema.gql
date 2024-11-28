@@ -1,0 +1,138 @@
+schema {
+    query: LeagueUser
+}
+
+type LeagueUser {
+    id: ID!
+    name: String!
+    league: League!
+    team: Team!
+}
+
+type League {
+    name: String!
+    status: LeagueStatus!
+    last_message_time: String!
+    avatar: String!
+    teams: [Team!]!
+    transactions: [Transaction!]!
+}
+
+type Team {
+    name: String!
+    avatar: String!
+    wins: Int!
+    losses: Int!
+    fpts_total: Float!
+    fpts_against_total: Float!
+    players: [Player!]!
+    rosterPositions: [RosterPosition!]!
+}
+
+enum NflTeamId {
+    ARI
+    ATL
+    BAL
+    BUF
+    CAR
+    CHI
+    CIN
+    CLE
+    DAL
+    DEN
+    DET
+    FA
+    GB
+    HOU
+    IND
+    JAC
+    KC
+    LAC
+    LAR
+    LV
+    MIA
+    MIN
+    NE
+    NO
+    NYG
+    NYJ
+    PHI
+    PIT
+    SEA
+    SF
+    TB
+    TEN
+    WAS
+}
+
+type NflTeam {
+    name: String!
+    id: NflTeamId!
+    city: String!
+    state: String!
+}
+
+enum LeagueStatus {
+    PreDraft
+    InSeason
+}
+
+enum RosterPosition {
+    QB
+    RB
+    WR
+    FLEX_WR
+    FLEX_WT
+    FLEX_WRT
+    FLEX_QWRT
+    K
+    FLEX_IDP
+    DEF
+    DL
+    LB
+    DB
+    Bench
+    IR
+}
+
+type DraftPick {
+    season: String!
+    round: Int!
+    team: String!
+}
+
+enum TransactionType {
+    Trade
+    Add
+    Drop
+    AddDrop
+    WaiverClaim
+}
+
+union Transferable = DraftPick | Player | WaiverBudgetPayment 
+
+type TransferablesReceived = Transferable | null;
+type Transaction {
+    processedTime: Int!
+    entities: [Team!, Team | "FreeAgents" | "Waivers"]!
+    items: [TransferablesReceived!, TransferablesReceived!]!
+}
+
+type WaiverBudgetPayment {
+    amount: Int!
+}
+
+type Player {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    injuryStatus: InjuryStatus!
+    teamId: ID!
+}
+
+enum InjuryStatus {
+    PUP
+    OUT
+    Q
+    IR
+}

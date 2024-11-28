@@ -1,0 +1,6 @@
+deno
+jq
+curl
+vscode
+python
+jupyter notebook
