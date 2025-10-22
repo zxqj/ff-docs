@@ -1,0 +1,23 @@
+# yaml
+version: "3.9"
+
+services:
+  jupyter-wiki:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jupyter-wiki:latest
+    container_name: jupyter-wiki
+    hostname: jupyter-wiki
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter-root:/home/jovyan/work
+      - /tmp/.X11-unix/:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+    working_dir: /home/jovyan/work
+    command: ["jupyter", "lab", "--ServerApp.token=", "--ip=0.0.0.0", "--no-browser"]
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
