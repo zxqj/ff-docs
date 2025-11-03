@@ -1,0 +1,17 @@
+* ranking_param_sets
+    * expert_id
+    * position
+    * scope
+    * scoring_format
+* experts
+    * id
+    * name
+    * url
+* rankings
+    * id
+    * param_set_id
+    * time
+* player_rankings
+    * ranking_id
+    * player_id
+    * rank
